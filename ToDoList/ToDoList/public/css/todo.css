@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+button {
+    font-size: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+input {
+    font-size: 15px;
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical
+}
+
+ul {
+    width: 25%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    border: hidden;
+    border-radius: 6px;
+    background-color: #cceaff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+
+ul li:hover {
+    background: #ddd;
+    cursor: pointer;
+}
+
+.in-progress {
+    background-color: #fffadd;
+}
+
+.done {
+    background-color: #c3fbd8;
+    text-decoration: line-through;
+    order: 1;
+}
+
+.info {
+    border-color: #7ebbe6;
+    color: #7ebbe6;
+}
+
+    .info:hover {
+        background: #7ebbe6;
+        color: white;
+    }
+
+.danger {
+    border-color: #d6645c;
+    color: #b5534c;
+}
+
+    .danger:hover {
+        background: #d6645c;
+        color: white;
+    }
+
+.loader {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot-loader {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    color: #828282;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+}
+
+    .dot-loader::before, .dot-loader::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot-loader::before {
+        left: -15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        color: #828282;
+        animation: dotFlashing 1s infinite alternate;
+        animation-delay: 0s;
+    }
+
+    .dot-loader::after {
+        left: 15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        color: #828282;
+        animation: dotFlashing 1s infinite alternate;
+        animation-delay: 1s;
+    }
+
+@keyframes dotFlashing {
+    0% {
+        background-color: #828282;
+    }
+
+    50%, 100% {
+        background-color: #cccccc;
+    }
+}
+
+.alert {
+    width: 15%;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}

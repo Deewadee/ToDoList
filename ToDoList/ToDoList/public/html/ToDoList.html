@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <title>To-Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css\todo.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header>
+        <h1>My Todos</h1>
+    </header>
+    <main>
+        <section id="info">
+            <span>To add a Todo, enter text and press Enter</span>
+            <br>
+            <span>To remove Todos, click on the icon next to it</span>
+        </section>
+        <br>
+        <section id="inputBar">
+            <input id="todoText" type="text" placeholder="Add new Todo">
+            <input id="todoDate">
+            <button id="addTodo" type="button" class="info">Add Todo</button>           
+        </section>
+        <div id="alertSuccess" class="alert alert-success" hidden="hidden">
+            <span>Todo added successfully!</span>
+        </div>
+        <div id="alertError" class="alert alert-danger" hidden="hidden">
+            <strong>Error! </strong>
+            <span id="errorAlertSpan"></span>
+        </div>
+        <section id="todosSection" hidden="hidden">
+            <ul id="todos">
+            </ul>
+            <button id="removeTodos" type="button" onclick="RemoveTodos()" class="danger">Clear Todos</button>
+        </section>
+        <div class="loader">
+            <div class="dot-loader"></div>
+        </div>
+    </main>
+    <script src="js\jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="module" src="js\index.js"></script>
+</body>
+</html>
